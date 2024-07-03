@@ -5,8 +5,8 @@ A blog for book reviews. One author can add and edit reviews.
 This database was built using phpmyadmin and PHP as a programming language.
 
 # Version
-PHP version: 7.4.6
-phpMyAdmin version 5.0.2
+* PHP version: 7.4.6
+* phpMyAdmin version 5.0.2
 
 # Installation
 * Clone the repository to your local machine using 
