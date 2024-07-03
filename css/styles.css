@@ -1,0 +1,405 @@
+/*Colors
+warm yellow: #f6cd8b;
+dark grey: #333333;
+
+
+*/
+
+/* fonts einbinden 
+Quelle siehe Dokumentation*/
+@font-face {
+  font-family: "notosans";
+  src: url(../fonts/notosans.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "didactic";
+  src: url(../fonts/didactttf.ttf) format("truetype");
+}
+
+
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "notosans", sans-serif;
+  font-size: 1em;
+}
+
+.mainbackground {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #333333;
+}
+
+/*Header
+Bildquelle siehe Dokumentation*/
+header .headerbackground {
+  background-image: url("../img/headerbook.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+/* opacity of background image */
+.opacity {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+  text-align: center;
+  color: rgb(78, 71, 71);
+  padding: 10% 0;
+  color: #fff;
+  font-size: 2.5em;
+  font-family: "didactic";
+}
+
+@media only screen and (min-width: 45em) {
+  header h1 {
+    font-size: 5em;
+  }
+}
+
+header nav {
+  text-align: center;
+  padding: 2.5% 0;
+  background-color: #f6cd8b;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #333333;
+  margin: 0 5%;
+}
+
+.headerbackground nav ul li a:hover {
+  border-bottom: 2px solid #333333;
+}
+
+.headerbackground nav ul li a.active {
+  border-bottom: 2px solid #333333;
+}
+
+@media only screen and (min-width: 45em) {
+  header nav {
+    padding: 1.5% 25%;
+  }
+
+  header nav {
+    text-align: left;
+  }
+}
+
+nav ul li {
+  display: inline;
+}
+
+/*Sort Menu*/
+.wrapper .sort {
+  text-align: center;
+  margin: 0% auto;
+  padding: 5% 0 0 0;
+}
+
+
+.sortfloat1,
+.sortfloat2 {
+  margin: 2% 0;
+}
+
+.sort select,
+.sort input[type="submit"] {
+  width: 100%;
+  margin-top: 0;
+}
+
+.sort input,
+.sort input[type="submit"] {
+  background-color: #fff;
+  color: #333333;
+  border: 2px solid #fff;
+  padding: 2%;
+}
+
+.sort input:hover ,
+.sort input[type="submit"]:hover {
+  background-color: #333333;
+  color: #fff;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+.review .sortresponse {
+  color: #fff;
+  display: block;
+  text-align: center;
+}
+
+@media only screen and (min-width: 45em) {
+  .wrapper .sort {
+    text-align: center;
+    margin: 0% auto;
+    padding: 0 2.5% 2% 2.5%;
+  }
+
+  .wrapper .sort h2 {
+    margin: 0;
+    text-align: left;
+  }
+
+  .sort select,
+.sort input[type="submit"] {
+  padding: 5%;
+  width: 15em;
+  height: 4em;
+  margin: 0 auto;
+  display: inline-block;
+   border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+  .sortfloat1,
+  .sortfloat2 {
+    display: block;
+    width: 20%;
+    float: left;
+    margin: 2% auto;
+  }
+}
+
+/*Create und Edit Form*/
+.form {
+  margin: 0% auto;
+  padding: 5%;
+}
+
+.form form {
+  background-color: #fff;
+  padding: 5%;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+@media only screen and (min-width: 45em) {
+  .form form {
+    padding: 2%;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+}
+
+.form form fieldset {
+  border-width: 0;
+  border: none;
+}
+
+.form form legend {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.form input[type="submit"],
+.form input[type="reset"] {
+  background-color: #333333;
+  color: #fff;
+  margin: 2% 0;
+  padding: 4%;
+  border: none;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.form input[type="text"],
+.form select,
+.form textarea {
+  width: 100%;
+  padding: 4%;
+  border: 1px solid #000;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.form .label,
+.form .input,
+.form input[type="submit"],
+.form input[type="reset"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 45em) {
+  .form .label {
+    float: left;
+    width: 25%;
+    margin-top: 3%;
+  }
+
+  .form .input {
+    float: left;
+    width: 75%;
+    margin-top: 3%;
+  }
+
+  /* Clear floats after row */
+  .form .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .form input[type="submit"],
+  .form input[type="reset"] {
+    width: 20%;
+    margin: 1% 0;
+    padding: 1% 0;
+    border: 2px solid #333333;
+    cursor: pointer;
+    float: right;
+  }
+
+  .form input[type="submit"]:hover,
+  .form input[type="reset"]:hover {
+    border: 2px solid #333333;
+    background-color: #fff;
+    color: #333333;
+    cursor: pointer;
+  }
+
+  form input[type="text"],
+  .form select,
+  .form textarea {
+    padding: 2% !important;
+  }
+}
+
+/*Review*/
+.wrapper .review {
+  padding: 5%;
+  clear: both;
+}
+
+.review .post {
+  margin-bottom: 5%;
+  padding: 4%;
+  background-color: #fff;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+@media only screen and (min-width: 45em) {
+  .wrapper .review {
+    padding: 5%;
+  }
+  .review .post {
+    width: 50%;
+    margin: 0 auto 2% auto;
+    padding: 2%;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+}
+
+/*Review Inhalte*/
+
+/*Datum*/
+.post .datum {
+  float: right;
+  margin-bottom: 10%;
+}
+
+/*Überschrift*/
+.post h3 {
+  clear: both;
+  font-size: 1.5em;
+}
+
+.post .name {
+  font-style: italic;
+}
+
+/*Infos*/
+.post .genre,
+.post .bewertung {
+  display: inline-block;
+  width: 100%;
+  margin-top: 3%;
+  text-align: center;
+  background-color: #f6cd8b;
+  color: #333333;
+  padding: 2%;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.post h4 {
+  padding-top: 4%;
+  padding-bottom: 1%;
+}
+
+.post .reviewtext {
+  padding-bottom: 10%;
+}
+
+@media only screen and (min-width: 45em) {
+  .post .genre,
+  .post .bewertung {
+    width: 40%;
+    float: left;
+    margin: 5%;
+  }
+
+  .post h4 {
+    clear: both;
+  }
+}
+
+/*Löschen und Bearbeiten Buttons*/
+.reviewbuttons a{
+  width: 100%;
+  margin-top: 4%;
+  padding: 2%;
+  display: inline-block;
+  text-align: center;
+  background-color: #333333;
+  border: 2px solid #333333;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+
+  .reviewbuttons a:hover {
+    border: 2px solid #333333;
+    background-color: #fff;
+    color: #333333;
+    cursor: pointer;
+  }
+
+@media only screen and (min-width: 45em) {
+  .reviewbuttons a{
+    float: left;
+    width: 45%;
+    margin: 2.5% 2.5% 0% 2.5%;
+  }
+
+  .empty {
+    clear: both;
+  }
+}
+
+/*Footer*/
+.footerbackground {
+  padding: 2.5%;
+  color: red;
+}
